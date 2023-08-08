@@ -6,14 +6,14 @@ let interval = setInterval(function() {
         let obstacle1 = document.getElementById("obstacle1");
         let obstacle2 = document.getElementById("obstacle2");
         obstacle1.style.top = obstacle1.offsetTop + 2 + "px";
-        if (obstacle1.style.top >= "300px") {
-            obstacle2.style.top = obstacle2.offsetTop + 2 + "px";
-        }
-        if (obstacle2.style.top == "620px") {
-            let pos1 = randomIntFromInterval(400, 530);
-            let pos2 = randomIntFromInterval(600, 800);
+        obstacle2.style.top = obstacle2.offsetTop + 2 + "px";
+        if (obstacle1.style.top == "800px") {
+            let pos1 = randomIntFromInterval(450, 800);
             obstacle1.style.top = "0px";
             obstacle1.style.left = pos1 + "px";
+        }
+        if (obstacle2.style.top == "800px") {
+            let pos2 = randomIntFromInterval(450, 800);
             obstacle2.style.top = "-150px";
             obstacle2.style.left = pos2 + "px";
         }
@@ -30,12 +30,12 @@ function areDivsTouching() {
       (rect1.left < rect2.right &&
       rect1.right > rect2.left &&
       rect1.top < rect2.bottom &&
-      rect1.bottom > rect2.top) ||
+      rect1.bottom > rect2.top)  ||
 
-      rect1.left < rect3.right &&
+      (rect1.left < rect3.right &&
       rect1.right > rect3.left &&
       rect1.top < rect3.bottom &&
-      rect1.bottom > rect3.top
+      rect1.bottom > rect3.top) 
     );
   }
 
