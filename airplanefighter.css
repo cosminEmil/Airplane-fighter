@@ -6,9 +6,8 @@
     position: relative;
     width: 80px;
     height: 80px;
-    top: 350px;
+    top: 500px;
     left: 600px;
-    transition: transform 0.2s;
 }
 
 .obstacles {
@@ -20,11 +19,10 @@
 }
 
 #obstacle1 {
-    left: 400px;
+    left: 500px;
 }
 
 #obstacle2 {
     top: -150px;
     left: 800px;
 }
-
