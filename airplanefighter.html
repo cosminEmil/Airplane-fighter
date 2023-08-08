@@ -7,9 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link href="airplanefighter.css" rel="stylesheet">
 </head>
-  <body onkeydown="getKeyAndMove(event)">
-    <img src="https://www.researchgate.net/publication/286277731/figure/fig2/AS:1088881575362567@1636621006760/A-2-dimensional-image-of-an-aircraft-was-processed-with-2D-overlap-save-method-a.jpg" id="airplane">
+  <body>
+    <label id="Score">Score: </label>
+    <label id="seconds-counter"></label>
+    <div class="obstacles" id="obstacle1"></div>
+    <div class="obstacles" id="obstacle2"></div>
+    <img id="airplane" src="https://www.researchgate.net/publication/286277731/figure/fig2/AS:1088881575362567@1636621006760/A-2-dimensional-image-of-an-aircraft-was-processed-with-2D-overlap-save-method-a.jpg">
     <script src="airplanefighter.js"></script>
+    <script src="score.js"></script>
+    <script src="obstacles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

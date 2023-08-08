@@ -1,5 +1,30 @@
+#Score, #seconds-counter {
+    font-size:x-large;
+}
+
 #airplane {
     position: relative;
     width: 80px;
     height: 80px;
+    top: 350px;
+    left: 600px;
+    transition: transform 0.2s;
 }
+
+.obstacles {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    top: 0px;
+}
+
+#obstacle1 {
+    left: 400px;
+}
+
+#obstacle2 {
+    top: -150px;
+    left: 800px;
+}
+
