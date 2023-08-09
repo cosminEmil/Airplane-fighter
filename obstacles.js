@@ -2,9 +2,11 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+let obstacle1 = document.getElementById("obstacle1");
+let obstacle2 = document.getElementById("obstacle2");
+
 let interval = setInterval(function() {
-        let obstacle1 = document.getElementById("obstacle1");
-        let obstacle2 = document.getElementById("obstacle2");
+        
         obstacle1.style.top = obstacle1.offsetTop + 2 + "px";
         obstacle2.style.top = obstacle2.offsetTop + 2 + "px";
         if (obstacle1.style.top == "800px") {
@@ -18,7 +20,6 @@ let interval = setInterval(function() {
             obstacle2.style.left = pos2 + "px";
         }
 }, 5);
-
 
 function areDivsTouching() {
     let rect1 = airplane.getBoundingClientRect();
