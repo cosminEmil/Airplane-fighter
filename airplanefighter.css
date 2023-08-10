@@ -1,4 +1,4 @@
-#Score, #seconds-counter {
+#Score, #secondsCounter {
     font-size:x-large;
 }
 
@@ -6,7 +6,7 @@
     position: relative;
     width: 80px;
     height: 80px;
-    top: 500px;
+    top: 700px;
     left: 600px;
 }
 
