@@ -22,20 +22,15 @@ document.addEventListener("keydown", (event) => {
     } else if (direction == "Up") {
         let rect1 = airplane.getBoundingClientRect();
         let bullet = document.createElement("div");
-        bullet.style.position = "absolute";
-        bullet.style.top = "688px";
+        bullet.classList.add("bulletStyle");
         bullet.style.left = rect1.x + 30 + "px";
-        bullet.style.width = "20px";
-        bullet.style.height = "20px";
-        bullet.style.borderRadius = "50%";
-        bullet.style.backgroundColor = "black";
-        bullet.setAttribute("id", "bullet");
         document.body.appendChild(bullet);
         let shooting = setInterval(function() {
                 bullet.style.top = bullet.offsetTop - 2 + "px";
                 if (bullet.style.top == "0px") {
                     bullet.remove();
                 }
+                destroyObstacles(bullet);
         }, 1);
     }
      airplane.style.transform = `translate(${position.x}px)`;
