@@ -3,8 +3,6 @@ let position = {
     x:0
 };
 
-let bullet = document.createElement("div");
-
 // movement
 document.addEventListener("keydown", (event) => {
     let arrowKeys = ["ArrowLeft", "ArrowRight", "ArrowUp"];
@@ -23,7 +21,7 @@ document.addEventListener("keydown", (event) => {
         position.x += 20; // if the right arrow key is pressed, the airplane will move 20px to the right 
     } else if (direction == "Up") {
         let rect1 = airplane.getBoundingClientRect();
-        
+        let bullet = document.createElement("div");
         bullet.style.position = "absolute";
         bullet.style.top = "688px";
         bullet.style.left = rect1.x + 30 + "px";
@@ -35,8 +33,10 @@ document.addEventListener("keydown", (event) => {
         document.body.appendChild(bullet);
         let shooting = setInterval(function() {
                 bullet.style.top = bullet.offsetTop - 2 + "px";
+                if (bullet.style.top == "0px") {
+                    bullet.remove();
+                }
         }, 1);
     }
      airplane.style.transform = `translate(${position.x}px)`;
 });
-
