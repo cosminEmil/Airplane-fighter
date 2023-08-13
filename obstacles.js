@@ -2,22 +2,21 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-let obstaclesMovement = setInterval(function() {
+let interval = setInterval(function() {
         let obstacle1 = document.getElementById("obstacle1");
         let obstacle2 = document.getElementById("obstacle2");
-        obstacle1.style.top = obstacle1.offsetTop + 2 + "px";
-        obstacle2.style.top = obstacle2.offsetTop + 2 + "px";
-        let newPos = randomIntFromInterval(450, 800);
-        if (obstacle1.style.top == "800px") {
-            obstacle1.style.top = "0px";
-            obstacle1.style.left = newPos + "px"; 
-        }
-        if (obstacle2.style.top == "800px") {
-            newPos = randomIntFromInterval(450, 800);
-            obstacle2.style.top = "-150px";
-            obstacle2.style.left = newPos + "px";
-        }
+        obstaclesMovement(obstacle1, "0px");
+        obstaclesMovement(obstacle2, "-150px");
 }, 5);
+
+function obstaclesMovement(obstacle, startPoint) {
+    obstacle.style.top = obstacle.offsetTop + 2 + "px";
+    let newPos = randomIntFromInterval(450, 800);
+    if (obstacle.style.top == "800px") {
+        obstacle.style.top = startPoint;
+        obstacle.style.left = newPos + "px"; 
+    }
+}
 
 function areDivsTouching(obj1, obj2, obj3) {
     // Check collision
