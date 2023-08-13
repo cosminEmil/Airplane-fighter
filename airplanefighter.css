@@ -1,12 +1,8 @@
-#Score, #secondsCounter {
-    font-size:x-large;
-}
-
 #airplane {
     position: relative;
     width: 80px;
     height: 80px;
-    top: 700px;
+    top: 500px;
     left: 600px;
 }
 
@@ -18,11 +14,11 @@
     top: 0px;
 }
 
-#obstacle1 {
-    left: 500px;
-}
-
-#obstacle2 {
-    top: -150px;
-    left: 800px;
+.bulletStyle {
+    position: absolute;
+    top: 488px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
 }
